@@ -25,11 +25,11 @@ public class OrderedObserver {
         }
     }
     
-    public void thisEventBefore(@Observes MyEvent event) {
-        LOGGER.info("thisEventBefore: " + event.getValue());
+   public void thisEventBefore(@Observes @Priority(Interceptor.Priority.APPLICATION - 200) MyEvent event){
+        LOGGER.info("thisEventBefore: {} ", event.getValue());
     }
     
-    public void thisEventAfter(@Observes MyEvent event) {
-        LOGGER.info("thisEventAfter: " + event.getValue());
+    public void thisEventAfter(@Observes @Priority(Interceptor.Priority.APPLICATION + 200) MyEvent event) {
+        LOGGER.info("thisEventAfter: {}", event.getValue());
     }
 }
