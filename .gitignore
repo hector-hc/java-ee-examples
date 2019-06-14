@@ -1,3 +1,7 @@
 /target/
 /java-ee-examples-jaxrs/target/
 /java-ee-examples-jaxrs/java-ee-examples-jaxrs-examples/target/
+/java-ee-examples-bean-validation/target/
+/java-ee-examples-bean-validation/java-ee-examples-bean-validation-examples/target/
+/java-ee-examples-cdi/java-ee-examples-cdi-standalone/target/
+/java-ee-examples-cdi/target/
