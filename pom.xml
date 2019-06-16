@@ -208,5 +208,6 @@
         <module>java-ee-examples-bean-validation</module>
         <module>java-ee-examples-cdi</module>
         <module>java-ee-examples-jsf</module>
+        <module>java-ee-examples-jsonb</module>
     </modules>
 </project>
