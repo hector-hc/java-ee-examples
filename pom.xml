@@ -123,6 +123,18 @@
                 <version>${version.jersey}</version>
             </dependency>
             
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-grizzly2-http</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-sse</artifactId>
+                <version>${version.jersey}</version>
+            </dependency>
+            
             <!-- JSON-B -->
             <dependency>
                 <groupId>org.glassfish</groupId>
