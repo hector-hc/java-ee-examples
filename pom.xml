@@ -209,5 +209,6 @@
         <module>java-ee-examples-cdi</module>
         <module>java-ee-examples-jsf</module>
         <module>java-ee-examples-jsonb</module>
+        <module>java-ee-examples-jsonp</module>
     </modules>
 </project>

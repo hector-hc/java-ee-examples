@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>javaee-examples</groupId>
+        <artifactId>java-ee-examples-jsonp</artifactId>
+        <version>1.0</version>
+    </parent>
+    <artifactId>java-ee-examples-jsonp-examples-se</artifactId>
+    <packaging>jar</packaging>
+    <name>Java EE - Examples - JSON-P (Examples SE)</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>yasson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+        </dependency>
+    </dependencies>
+</project>
