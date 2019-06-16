@@ -34,6 +34,9 @@
         <!-- Eclipse yasson -->
         <version.eclipse.yasson>1.0.3</version.eclipse.yasson>
         
+        <!-- Java EE MVC -->
+        <version.javax.mvc>1.0-pr</version.javax.mvc>
+        
         <!-- Maven Plugins -->
         <version.maven.compiler.plugin>3.8.1</version.maven.compiler.plugin>
         <version.maven.war.plugin>3.2.2</version.maven.war.plugin>
@@ -83,8 +86,14 @@
                 <artifactId>weld-se-shaded</artifactId>
                 <!-- 3.1.1.Final -->
                 <version>${version.weld}</version>
-            </dependency>    
+            </dependency>  
             
+            <!-- Java EE MVC -->  
+            <dependency>
+                <groupId>javax.mvc</groupId>
+                <artifactId>javax.mvc-api</artifactId>
+                <version>${version.javax.mvc}</version>
+            </dependency>
             <!-- Logger -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -210,5 +219,6 @@
         <module>java-ee-examples-jsf</module>
         <module>java-ee-examples-jsonb</module>
         <module>java-ee-examples-jsonp</module>
+        <module>java-ee-examples-mvc</module>
     </modules>
 </project>
