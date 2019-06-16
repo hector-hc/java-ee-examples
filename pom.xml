@@ -207,5 +207,6 @@
         <module>java-ee-examples-jaxrs</module>
         <module>java-ee-examples-bean-validation</module>
         <module>java-ee-examples-cdi</module>
+        <module>java-ee-examples-jsf</module>
     </modules>
 </project>
