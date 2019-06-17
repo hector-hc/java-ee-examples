@@ -37,6 +37,9 @@
         <!-- Java EE MVC -->
         <version.javax.mvc>1.0-pr</version.javax.mvc>
         
+        <!-- JPA Eclipse -->
+        <version.eclipse.persistence>2.7.4</version.eclipse.persistence>
+        
         <!-- Maven Plugins -->
         <version.maven.compiler.plugin>3.8.1</version.maven.compiler.plugin>
         <version.maven.war.plugin>3.2.2</version.maven.war.plugin>
@@ -155,6 +158,20 @@
                 <artifactId>yasson</artifactId>
                 <version>1.0.3</version>
             </dependency>
+            
+            <!-- Eclipse Persistence -->
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>eclipselink</artifactId>
+                <version>${version.eclipse.persistence}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+                <version>${version.eclipse.persistence}</version>
+                <scope>provided</scope>
+            </dependency>  
         </dependencies>
     </dependencyManagement>
     <build>
@@ -222,5 +239,6 @@
         <module>java-ee-examples-mvc</module>
         <module>java-ee-examples-security</module>
         <module>java-ee-examples-servlets</module>
+        <module>java-ee-examples-batch</module>
     </modules>
 </project>
