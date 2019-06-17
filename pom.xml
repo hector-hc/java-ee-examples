@@ -221,5 +221,6 @@
         <module>java-ee-examples-jsonp</module>
         <module>java-ee-examples-mvc</module>
         <module>java-ee-examples-security</module>
+        <module>java-ee-examples-servlets</module>
     </modules>
 </project>
