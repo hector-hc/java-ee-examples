@@ -38,7 +38,7 @@
         <version.javax.mvc>1.0-pr</version.javax.mvc>
         
         <!-- JPA Eclipse -->
-        <version.eclipse.persistence>2.7.4</version.eclipse.persistence>
+        <version.eclipse.persistence>2.5.2</version.eclipse.persistence>
         
         <!-- Maven Plugins -->
         <version.maven.compiler.plugin>3.8.1</version.maven.compiler.plugin>

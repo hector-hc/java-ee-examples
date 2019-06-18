@@ -11,5 +11,6 @@
     <name>Java EE - Examples - CDI</name>
     <modules>
         <module>java-ee-examples-cdi-standalone</module>
-    </modules>
+    <module>java-ee-examples-cdi-examples</module>
+  </modules>
 </project>
