@@ -1,10 +1,10 @@
 /*
 * Classname:    Country.java
-* Author:       Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+* Author:       Héctor Hernández Chávez
 * Date:         18-jun-2019
 * © Concepto Móvil S.A. de C.V. 2014
 */
-package javaee.examples.cache.entities;
+package javaee.examples.ejb.cache.entities;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,7 +21,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 /**
- * @author Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+ * @author Héctor Hernández Chávez
  */
 @Entity
 @Table(name = "cache_country")

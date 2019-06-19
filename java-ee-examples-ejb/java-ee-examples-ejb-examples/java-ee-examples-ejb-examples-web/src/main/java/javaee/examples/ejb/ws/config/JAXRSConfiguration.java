@@ -4,7 +4,7 @@
 * Date:         18-jun-2019
 * © Concepto Móvil S.A. de C.V. 2014
 */
-package javaee.examples.cache.ws.config;
+package javaee.examples.ejb.ws.config;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

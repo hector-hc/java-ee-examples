@@ -1,16 +1,15 @@
 /*
 * Classname:    CountryCacheEJB.java
-* Author:       Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+* Author:       Héctor Hernández Chávez
 * Date:         18-jun-2019
-* © Concepto Móvil S.A. de C.V. 2014
 */
-package javaee.examples.cache.entities.singleton;
+package javaee.examples.ejb.cache.entities.singleton;
 
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.stream.Collectors;
-import javaee.examples.cache.entities.Country;
+import javaee.examples.ejb.cache.entities.Country;
 import javax.annotation.PostConstruct;
 import javax.ejb.Lock;
 import javax.ejb.LockType;
@@ -20,7 +19,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- * @author Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+ * @author Héctor Hernández Chávez
  */
 @Singleton
 @Startup

@@ -1,12 +1,11 @@
 /*
 * Classname:    WSCacheCountry.java
-* Author:       Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+* Author:       Héctor Hernández Chávez
 * Date:         18-jun-2019
-* © Concepto Móvil S.A. de C.V. 2014
 */
-package javaee.examples.cache.ws;
+package javaee.examples.ejb.ws;
 
-import javaee.examples.cache.entities.singleton.CountryCacheEJB;
+import javaee.examples.ejb.cache.entities.singleton.CountryCacheEJB;
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -15,7 +14,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 /**
- * @author Héctor Hernández Chávez <hector.hernandez@conceptomovil.com>
+ * @author Héctor Hernández Chávez
  */
 @Path("cache")
 public class WSCacheCountry {
