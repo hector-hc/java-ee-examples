@@ -5,7 +5,7 @@
  * @Created on Jun 16, 2019, 9:31:34 PM
  */
 
-package javaee.servlets.push;
+package javaee.examples.servlets.server.push;
 
 import java.io.IOException;
 import java.io.PrintWriter;
