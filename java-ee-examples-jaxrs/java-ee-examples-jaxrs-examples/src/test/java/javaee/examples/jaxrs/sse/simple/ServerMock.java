@@ -5,8 +5,9 @@
  * @Created on Jun 15, 2019, 2:21:11 PM
  */
 
-package javaee.jaxrs.sse.simple;
+package javaee.examples.jaxrs.sse.simple;
 
+import javaee.examples.jaxrs.sse.simple.SseResourceMessage;
 import java.io.IOException;
 import java.net.URI;
 

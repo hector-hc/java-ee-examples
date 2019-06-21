@@ -5,7 +5,7 @@
  * @Created on Jun 14, 2019, 5:57:12 PM
  */
 
-package javaee.jaxrs.sse.simple;
+package javaee.examples.jaxrs.sse.simple;
 
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;

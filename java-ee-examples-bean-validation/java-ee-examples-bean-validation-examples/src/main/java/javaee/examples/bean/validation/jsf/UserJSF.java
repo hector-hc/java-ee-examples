@@ -3,7 +3,7 @@
  * @author Hector
  * @Created on Jun 17, 2019, 9:22:24 PM
  */
-package javaee.bean.validation.jsf;
+package javaee.examples.bean.validation.jsf;
 
 import java.time.LocalDate;
 import javax.enterprise.context.RequestScoped;

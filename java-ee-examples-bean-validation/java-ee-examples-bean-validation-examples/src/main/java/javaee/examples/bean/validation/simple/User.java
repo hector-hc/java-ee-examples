@@ -5,7 +5,7 @@
  * @Created on Jun 14, 2019, 9:04:39 AM
  */
 
-package javaee.bean.validation.simple;
+package javaee.examples.bean.validation.simple;
 
 import java.io.Serializable;
 import java.util.List;

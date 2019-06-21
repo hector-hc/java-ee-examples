@@ -5,9 +5,9 @@
  * @Created on Jun 14, 2019, 9:30:50 AM
  */
 
-package javaee.bean.validation.ws;
+package javaee.examples.bean.validation.ws;
 
-import javaee.bean.validation.simple.User;
+import javaee.examples.bean.validation.simple.User;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

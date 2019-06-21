@@ -7,6 +7,7 @@
 
 package javaee.bean.validation.simple;
 
+import javaee.examples.bean.validation.simple.User;
 import java.util.Arrays;
 import java.util.Set;
 import javax.validation.ConstraintViolation;

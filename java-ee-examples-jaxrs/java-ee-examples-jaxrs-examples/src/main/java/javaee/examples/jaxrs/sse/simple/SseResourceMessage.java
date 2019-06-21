@@ -5,7 +5,7 @@
  * @Created on Jun 15, 2019, 2:20:08 PM
  */
 
-package javaee.jaxrs.sse.simple;
+package javaee.examples.jaxrs.sse.simple;
 
 import java.io.IOException;
 import javax.ws.rs.GET;

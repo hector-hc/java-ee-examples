@@ -5,7 +5,7 @@
  * @Created on Jun 15, 2019, 2:28:42 PM
  */
 
-package javaee.jaxrs.sse.simple;
+package javaee.examples.jaxrs.sse.simple;
 
 import java.util.concurrent.TimeUnit;
 import javax.ws.rs.client.Client;

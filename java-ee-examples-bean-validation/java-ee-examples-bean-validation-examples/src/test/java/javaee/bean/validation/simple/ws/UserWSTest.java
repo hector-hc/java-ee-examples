@@ -8,7 +8,7 @@
 package javaee.bean.validation.simple.ws;
 
 import java.util.Arrays;
-import javaee.bean.validation.simple.User;
+import javaee.examples.bean.validation.simple.User;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
