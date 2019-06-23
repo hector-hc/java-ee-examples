@@ -8,6 +8,7 @@
 package javaee.examples.jsf.validator;
 
 import java.io.Serializable;
+import javaee.examples.jsf.backing.BaseBacking;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
@@ -16,7 +17,7 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class UserBean implements Serializable {
+public class UserBean extends BaseBacking implements Serializable {
 
     private User user;
     
