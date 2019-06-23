@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>java-ee-examples-security</artifactId>
-        <groupId>javaee-examples</groupId>
-        <version>1.0</version>
-    </parent>
-
+    <artifactId>java-ee-examples-security</artifactId>
     <groupId>javaee-examples</groupId>
-    <artifactId>java-ee-examples-security-realm-jdbc</artifactId>
+    <version>1.0</version>
+  </parent>
+
+    <groupId>javaee.examples</groupId>
+    <artifactId>java-ee-examples-security-soteria</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>Java EE - Examples - Security (Realm - JDBC)</name>
+    <name>Java EE - Examples - Security (Soteria) </name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -23,20 +23,6 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-client</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.inject</groupId>
-            <artifactId>jersey-hk2</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

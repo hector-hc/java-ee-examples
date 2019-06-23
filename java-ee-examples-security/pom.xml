@@ -12,5 +12,7 @@
   <modules>
     <module>java-ee-examples-security-examples</module>
     <module>java-ee-examples-security-realm-jdbc</module>
+    <module>java-ee-examples-security-soteria</module>
+    <module>java-ee-examples-security-authorization</module>
   </modules>
 </project>

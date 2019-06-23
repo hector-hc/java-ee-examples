@@ -21,3 +21,5 @@
 /java-ee-examples-jpa/java-ee-examples-jpa-examples/java-ee-examples-jpa-examples-web/target/
 /java-ee-examples-jpa/java-ee-examples-jpa-examples/java-ee-examples-jpa-examples-ear/target/
 /java-ee-examples-security/java-ee-examples-security-realm-jdbc/target/
+/java-ee-examples-security/java-ee-examples-security-soteria/target/
+/java-ee-examples-security/java-ee-examples-security-authorization/target/
