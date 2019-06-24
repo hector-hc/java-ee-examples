@@ -25,3 +25,6 @@
 /java-ee-examples-security/java-ee-examples-security-authorization/target/
 /java-ee-examples-security/java-ee-examples-security-declarative/target/
 /java-ee-examples-security/java-ee-examples-security-programmatic/target/
+/java-ee-examples-jms/java-ee-examples-jms-examples/java-ee-examples-jms-examples-ejb/target/
+/java-ee-examples-jms/java-ee-examples-jms-examples/java-ee-examples-jms-examples-web/target/
+/java-ee-examples-jms/java-ee-examples-jms-examples/java-ee-examples-jms-examples-ear/target/

@@ -262,5 +262,6 @@
         <module>java-ee-examples-batch</module>
         <module>java-ee-examples-ejb</module>
         <module>java-ee-examples-jpa</module>
+        <module>java-ee-examples-jms</module>
     </modules>
 </project>
