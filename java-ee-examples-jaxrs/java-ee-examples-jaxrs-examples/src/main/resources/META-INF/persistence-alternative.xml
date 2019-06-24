@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="altJavaeeExamplesPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>javaee.examples.jaxrs.mono.entities.MonoUser</class>
+        <class>javaee.examples.jaxrs.mono.entities.MonoUserAddress</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <!-- DB Driver -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/beginning_java_ee"/>
+            <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="javaee"/>
+            <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="javaee"/>
+            <!-- DB Password -->
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <!-- DB Dialect -->
+            <property name="hibernate.show_sql" value="true"/>
+            <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- Show SQL formatted -->
+            <!--<property name="javax.persistence.schema-generation.create-source" value="script"/>-->
+            <!--<property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create.sql"/>-->
+            <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="./create.sql"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="./drop.sql"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+        <!--
+        <properties>
+            <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="./create.sql"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="./drop.sql"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+        -->
+    </persistence-unit>
+</persistence>

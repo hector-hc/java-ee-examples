@@ -1,0 +1,3 @@
+ALTER TABLE mono_user_address DROP CONSTRAINT FK_mono_user_address_user_id
+DROP TABLE mono_user CASCADE
+DROP TABLE mono_user_address CASCADE
