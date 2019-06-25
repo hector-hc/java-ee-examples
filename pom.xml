@@ -59,22 +59,6 @@
         
         <payara.version>5.192</payara.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.eclipse.microprofile</groupId>
-            <artifactId>microprofile</artifactId>
-            <version>2.1</version>
-            <type>pom</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>fish.payara.api</groupId>
-            <artifactId>payara-api</artifactId>
-            <version>${payara.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        
-    </dependencies>
     <dependencyManagement>
         <dependencies>
             <!-- Java EE -->
@@ -203,13 +187,14 @@
                 <artifactId>postgresql</artifactId>
                 <version>${version.postgresql}</version>
             </dependency>
-            
+            <!--
             <dependency>
                 <groupId>fish.payara.extras</groupId>
                 <artifactId>payara-micro</artifactId>
                 <version>${payara.version}</version>
                 <scope>provided</scope>
             </dependency>
+            -->
         </dependencies>
     </dependencyManagement>
     <build>

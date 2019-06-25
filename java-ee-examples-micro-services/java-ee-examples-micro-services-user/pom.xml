@@ -20,7 +20,6 @@
     </properties>
     
     <dependencies>
-        <!--
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
@@ -28,7 +27,7 @@
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -37,11 +36,13 @@
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
+        <!--
         <dependency>
             <groupId>fish.payara.extras</groupId>
             <artifactId>payara-micro</artifactId>
             <scope>provided</scope>
         </dependency>
+        -->
     </dependencies>
 
     <build>

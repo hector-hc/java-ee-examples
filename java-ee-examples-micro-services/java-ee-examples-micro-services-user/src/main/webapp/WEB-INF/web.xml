@@ -9,6 +9,7 @@
             30
         </session-timeout>
     </session-config>
+    <!--
     <data-source>
         <name>java:global/javaee</name>
         <class-name>org.postgresql.ds.PGSimpleDataSource</class-name>
@@ -39,4 +40,5 @@
         </property>
         
     </data-source>
+    -->
 </web-app>
