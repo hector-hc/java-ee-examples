@@ -5,13 +5,13 @@
  * @Created on Jun 17, 2019, 9:42:39 PM
  */
 
-package javaee.examples.cdi.ws;
+package javaee.examples.cdi.qualifiers.ws;
 
 import java.io.IOException;
-import javaee.examples.cdi.profile.Profile;
-import javaee.examples.cdi.profile.ProfileType;
-import javaee.examples.cdi.profile.User;
-import javaee.examples.cdi.profile.UserProfile;
+import javaee.examples.cdi.qualifiers.profile.Profile;
+import javaee.examples.cdi.qualifiers.profile.ProfileType;
+import javaee.examples.cdi.qualifiers.profile.User;
+import javaee.examples.cdi.qualifiers.profile.UserProfile;
 import javax.enterprise.event.Event;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;

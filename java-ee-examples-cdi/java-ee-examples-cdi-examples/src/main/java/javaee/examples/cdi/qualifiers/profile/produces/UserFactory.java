@@ -5,9 +5,9 @@
  * @Created on Jun 17, 2019, 9:44:38 PM
  */
 
-package javaee.examples.cdi.profile.produces;
+package javaee.examples.cdi.qualifiers.profile.produces;
 
-import javaee.examples.cdi.profile.User;
+import javaee.examples.cdi.qualifiers.profile.User;
 import javax.enterprise.inject.Produces;
 
 

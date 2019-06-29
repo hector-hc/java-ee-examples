@@ -3,7 +3,7 @@
  * @author Hector
  * @Created on Jun 17, 2019, 9:45:14 PM
  */
-package javaee.examples.cdi.profile;
+package javaee.examples.cdi.qualifiers.profile;
 
 public class User {
 

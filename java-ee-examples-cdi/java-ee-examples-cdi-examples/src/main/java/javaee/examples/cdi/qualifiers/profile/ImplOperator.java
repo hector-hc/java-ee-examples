@@ -5,7 +5,7 @@
  * @Created on Jun 17, 2019, 9:40:20 PM
  */
 
-package javaee.examples.cdi.profile;
+package javaee.examples.cdi.qualifiers.profile;
 
 import javax.enterprise.inject.Default;
 

@@ -5,9 +5,9 @@
  * @Created on Jun 17, 2019, 9:49:41 PM
  */
 
-package javaee.examples.cdi.profile.handlers;
+package javaee.examples.cdi.qualifiers.profile.handlers;
 
-import javaee.examples.cdi.profile.User;
+import javaee.examples.cdi.qualifiers.profile.User;
 import javax.enterprise.event.Observes;
 import javax.enterprise.event.ObservesAsync;
 

@@ -5,7 +5,7 @@
  * @Created on Jun 17, 2019, 9:41:15 PM
  */
 
-package javaee.examples.cdi.profile;
+package javaee.examples.cdi.qualifiers.profile;
 
 @Profile(ProfileType.ADMIN)
 public class ImplAdmin implements UserProfile {
