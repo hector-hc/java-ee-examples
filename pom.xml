@@ -284,5 +284,6 @@
         <module>java-ee-examples-jpa</module>
         <module>java-ee-examples-jms</module>
         <module>java-ee-examples-micro-services</module>
+        <module>java-ee-examples-websockets</module>
     </modules>
 </project>
