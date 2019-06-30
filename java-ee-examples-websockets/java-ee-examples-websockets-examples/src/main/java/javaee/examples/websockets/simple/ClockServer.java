@@ -62,7 +62,6 @@ public class ClockServer {
     }
 
     @OnMessage
-
     public String handleMessage(String incomingMessage) {
         if ("stop".equals(incomingMessage)) {
             this.stopClock();
