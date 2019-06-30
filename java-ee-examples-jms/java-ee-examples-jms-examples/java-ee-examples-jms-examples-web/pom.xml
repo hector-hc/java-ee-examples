@@ -24,6 +24,12 @@
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javaee.examples</groupId>
+            <artifactId>java-ee-examples-jms-examples-ejb</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
