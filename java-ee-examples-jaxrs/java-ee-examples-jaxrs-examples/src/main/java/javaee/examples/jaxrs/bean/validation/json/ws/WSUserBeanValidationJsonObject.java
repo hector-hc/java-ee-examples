@@ -1,19 +1,19 @@
 /*
-* Classname:    WSUserBeanValidation.java
+* Classname:    WSUserBeanValidationJsonObject.java
 * Author:       Héctor Hernández Chávez
 * Date:         16-jul-2019
 */
-package javaee.examples.jaxrs.bean.validation.ws;
+package javaee.examples.jaxrs.bean.validation.json.ws;
 
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 import javaee.examples.jaxrs.bean.validation.User;
 import javaee.examples.jaxrs.bean.validation.UserStore;
+import javaee.examples.jaxrs.bean.validation.json.ValidUser;
 import javax.inject.Inject;
+import javax.json.JsonObject;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -29,11 +29,11 @@ import javax.ws.rs.core.UriInfo;
 /**
  * @author Héctor Hernández Chávez
  */
-@Path("user/bean-validation")
+@Path("user/bean-validation/json-object")
 @Produces({MediaType.APPLICATION_JSON})
 @Consumes({MediaType.APPLICATION_JSON})
-public class WSUserBeanValidation {
-
+public class WSUserBeanValidationJsonObject {
+    
     @Inject
     UserStore userStore;
     
@@ -48,11 +48,6 @@ public class WSUserBeanValidation {
     @GET
     @Path("{id: \\d+}")
     public User getUserById(@PathParam("id") long id) {
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException ie) {
-            System.err.println("InterruptedException " + ie);
-        }
         Optional<User> optUser = userStore.getByUserId(id);
         if (optUser.isPresent()) {
             return optUser.get();
@@ -62,10 +57,18 @@ public class WSUserBeanValidation {
     }
     
     @POST
-    public Response createUser(@Valid @NotNull User user) {
-        User userCreated = userStore.addUser(user);
-        URI userUri = uriInfo.getBaseUriBuilder().path(WSUserBeanValidation.class)
-                .path(WSUserBeanValidation.class, "getUserById").build(userCreated.getId());
+    public Response createUser(@Valid @ValidUser JsonObject object) {
+        User user = readUser(object);
+        User userCreaded = userStore.addUser(user);
+        
+        URI userUri = uriInfo.getBaseUriBuilder().path(WSUserBeanValidationJsonObject.class)
+                .path(WSUserBeanValidationJsonObject.class, "getUserById").build(userCreaded.getId());
         return Response.created(userUri).build();
+    }
+    
+    private User readUser(JsonObject object) {
+        User user = new User();
+        user.setName(object.getString("name"));
+        return user;
     }
 }
