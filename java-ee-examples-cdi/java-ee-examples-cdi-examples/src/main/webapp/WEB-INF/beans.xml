@@ -7,4 +7,9 @@
         <class>javaee.examples.cdi.decorator.numgen.FromEightToThirteenDigitsDecorator</class>
         <class>javaee.examples.cdi.decorator.coffee.CountingCoffeeMaker</class>
     </decorators>
+    <!--
+    <interceptors>
+        <class>javaee.examples.cdi.interceptor.tracker.TrackingInterceptor</class>
+    </interceptors>
+    -->
 </beans>
