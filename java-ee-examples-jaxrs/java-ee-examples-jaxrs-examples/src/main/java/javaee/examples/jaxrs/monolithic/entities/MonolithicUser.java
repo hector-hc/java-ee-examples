@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "mono_user")
-public class MonoUser implements Serializable {
+public class MonolithicUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
@@ -28,10 +28,10 @@ public class MonoUser implements Serializable {
     
     private String email;
     
-    public MonoUser() {
+    public MonolithicUser() {
     }
     
-    public MonoUser(final Long id) {
+    public MonolithicUser(final Long id) {
         this.id = id;
     }
 
@@ -69,10 +69,10 @@ public class MonoUser implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof MonoUser)) {
+        if (!(object instanceof MonolithicUser)) {
             return false;
         }
-        MonoUser other = (MonoUser) object;
+        MonolithicUser other = (MonolithicUser) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }

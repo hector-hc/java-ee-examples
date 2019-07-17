@@ -6,7 +6,7 @@
 package javaee.examples.jaxrs.monolithic.ejbs;
 
 import java.util.List;
-import javaee.examples.jaxrs.monolithic.entities.MonoUser;
+import javaee.examples.jaxrs.monolithic.entities.MonolithicUser;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,34 +16,34 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 @Stateless
-public class MonoUserEJB {
+public class MonolithicUserEJB {
 
     @PersistenceContext
     private EntityManager em;
 
-    public Long add(MonoUser user) {
+    public Long add(MonolithicUser user) {
         em.persist(user);
         return user.getId();
     }
 
-    public void remove(MonoUser user) {
+    public void remove(MonolithicUser user) {
         em.remove(user);
     }
 
-    public void update(MonoUser user) {
+    public void update(MonolithicUser user) {
         em.merge(user);
     }
 
-    public MonoUser findById(Long id) {
-        return em.find(MonoUser.class, id);
+    public MonolithicUser findById(Long id) {
+        return em.find(MonolithicUser.class, id);
     }
 
-    public List<MonoUser> get() {
+    public List<MonolithicUser> get() {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<MonoUser> cq = cb.createQuery(MonoUser.class);
-        Root<MonoUser> pet = cq.from(MonoUser.class);
+        CriteriaQuery<MonolithicUser> cq = cb.createQuery(MonolithicUser.class);
+        Root<MonolithicUser> pet = cq.from(MonolithicUser.class);
         cq.select(pet);
-        TypedQuery<MonoUser> q = em.createQuery(cq);
+        TypedQuery<MonolithicUser> q = em.createQuery(cq);
         return q.getResultList();
     }
 }

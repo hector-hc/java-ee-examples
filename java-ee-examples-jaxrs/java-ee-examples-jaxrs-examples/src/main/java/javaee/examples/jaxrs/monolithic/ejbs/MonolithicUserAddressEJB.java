@@ -8,7 +8,7 @@
 package javaee.examples.jaxrs.monolithic.ejbs;
 
 import java.util.List;
-import javaee.examples.jaxrs.monolithic.entities.MonoUserAddress;
+import javaee.examples.jaxrs.monolithic.entities.MonolithicUserAddress;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,34 +18,34 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 @Stateless
-public class MonoUserAddressEJB {
+public class MonolithicUserAddressEJB {
 
     @PersistenceContext
     private EntityManager em;
     
-    public Long add(MonoUserAddress address) {
+    public Long add(MonolithicUserAddress address) {
         em.persist(address);
         return address.getId();
     }
     
-    public void remove(MonoUserAddress address) {
+    public void remove(MonolithicUserAddress address) {
         em.remove(address);
     }
     
-    public void update(MonoUserAddress address) {
+    public void update(MonolithicUserAddress address) {
         em.merge(address);
     }
     
-    public MonoUserAddress findById(final Long id) {
-        return em.find(MonoUserAddress.class, id);
+    public MonolithicUserAddress findById(final Long id) {
+        return em.find(MonolithicUserAddress.class, id);
     }
     
-    public List<MonoUserAddress> getAll() {
+    public List<MonolithicUserAddress> getAll() {
         CriteriaBuilder cb = em.getCriteriaBuilder();
-        CriteriaQuery<MonoUserAddress> cq = cb.createQuery(MonoUserAddress.class);
-        Root<MonoUserAddress> pet = cq.from(MonoUserAddress.class);
+        CriteriaQuery<MonolithicUserAddress> cq = cb.createQuery(MonolithicUserAddress.class);
+        Root<MonolithicUserAddress> pet = cq.from(MonolithicUserAddress.class);
         cq.select(pet);
-        TypedQuery<MonoUserAddress> q = em.createQuery(cq);
+        TypedQuery<MonolithicUserAddress> q = em.createQuery(cq);
         return q.getResultList();
     }
 }

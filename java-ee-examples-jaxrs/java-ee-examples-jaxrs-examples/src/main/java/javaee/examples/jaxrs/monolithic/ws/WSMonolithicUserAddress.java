@@ -8,8 +8,8 @@
 package javaee.examples.jaxrs.monolithic.ws;
 
 import java.net.URI;
-import javaee.examples.jaxrs.monolithic.ejbs.MonoUserAddressEJB;
-import javaee.examples.jaxrs.monolithic.entities.MonoUserAddress;
+import javaee.examples.jaxrs.monolithic.ejbs.MonolithicUserAddressEJB;
+import javaee.examples.jaxrs.monolithic.entities.MonolithicUserAddress;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -27,7 +27,7 @@ import javax.ws.rs.core.UriInfo;
 public class WSMonolithicUserAddress {
 
     @EJB
-    private MonoUserAddressEJB userAddressEJB;
+    private MonolithicUserAddressEJB userAddressEJB;
     
     @GET
     @Path("{id: \\d+}")
@@ -45,7 +45,7 @@ public class WSMonolithicUserAddress {
     
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response add(@Context UriInfo uriInfo, MonoUserAddress userAddress) {
+    public Response add(@Context UriInfo uriInfo, MonolithicUserAddress userAddress) {
         Long id = userAddressEJB.add(userAddress);
         URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(id)).build();
         return Response.created(uri).build();

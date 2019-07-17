@@ -19,7 +19,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "mono_user_address")
-public class MonoUserAddress implements Serializable {
+public class MonolithicUserAddress implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
@@ -29,7 +29,7 @@ public class MonoUserAddress implements Serializable {
     
     @JoinColumn(name = "user_id")
     @ManyToOne
-    private MonoUser monoUser;
+    private MonolithicUser monoUser;
     
     private String street;
     
@@ -39,10 +39,10 @@ public class MonoUserAddress implements Serializable {
     
     private String zip;
     
-    public MonoUserAddress() {
+    public MonolithicUserAddress() {
     }
     
-    public MonoUserAddress(Long id) {
+    public MonolithicUserAddress(Long id) {
         this.id = id;
     }
 
@@ -54,11 +54,11 @@ public class MonoUserAddress implements Serializable {
         this.id = id;
     }
 
-    public MonoUser getMonoUser() {
+    public MonolithicUser getMonoUser() {
         return monoUser;
     }
 
-    public void setMonoUser(MonoUser monoUser) {
+    public void setMonoUser(MonolithicUser monoUser) {
         this.monoUser = monoUser;
     }
 
@@ -106,10 +106,10 @@ public class MonoUserAddress implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof MonoUserAddress)) {
+        if (!(object instanceof MonolithicUserAddress)) {
             return false;
         }
-        MonoUserAddress other = (MonoUserAddress) object;
+        MonolithicUserAddress other = (MonolithicUserAddress) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
