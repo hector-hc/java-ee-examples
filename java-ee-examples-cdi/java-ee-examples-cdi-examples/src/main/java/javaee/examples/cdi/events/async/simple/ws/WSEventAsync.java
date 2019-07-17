@@ -19,7 +19,7 @@ import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Response;
 
-@Path("user-event-async")
+@Path("event-async/user")
 public class WSEventAsync {
 
     @Inject

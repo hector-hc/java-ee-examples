@@ -5,7 +5,7 @@
  * @Created on Jun 24, 2019, 8:13:25 AM
  */
 
-package javaee.examples.jaxrs.mono.entities;
+package javaee.examples.jaxrs.monolithic.entities;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

@@ -1,5 +1,5 @@
 /*
-* Classname:    WSUserClient.java
+* Classname:    WSJAXClientUser.java
 * Author:       Héctor Hernández Chávez
 * Date:         16-jul-2019
 */
@@ -18,8 +18,8 @@ import javax.ws.rs.core.Response;
 /**
  * @author Héctor Hernández Chávez
  */
-@Path("user/jaxrs-client")
-public class WSUserClient {
+@Path("jaxrs-client/user")
+public class WSJAXClientUser {
 
     @Inject
     UserClient userClient;

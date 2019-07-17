@@ -18,7 +18,7 @@ import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Response;
 
 @Path("async-ejb")
-public class WSUserAsyncEjb {
+public class WSAsyncEjbUser {
 
     @EJB
     private GetterUserEJB getterUserEJB;

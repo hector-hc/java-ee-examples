@@ -3,10 +3,10 @@
  * @author Hector
  * @Created on Jun 24, 2019, 8:24:01 AM
  */
-package javaee.examples.jaxrs.mono.ejbs;
+package javaee.examples.jaxrs.monolithic.ejbs;
 
 import java.util.List;
-import javaee.examples.jaxrs.mono.entities.MonoUser;
+import javaee.examples.jaxrs.monolithic.entities.MonoUser;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

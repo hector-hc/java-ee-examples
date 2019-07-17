@@ -1,5 +1,5 @@
 /*
-* Classname:    WSEmployeeJsonbAdapter.java
+* Classname:    WSJsonbAdapterEmployee.java
 * Author:       Héctor Hernández Chávez
 * Date:         16-jul-2019
 */
@@ -16,8 +16,8 @@ import javax.ws.rs.core.Response;
 /**
  * @author Héctor Hernández Chávez
  */
-@Path("employee/jsonb/adapter")
-public class WSEmployeeJsonbAdapter {
+@Path("jsonb/adapter/employee")
+public class WSJsonbAdapterEmployee {
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})

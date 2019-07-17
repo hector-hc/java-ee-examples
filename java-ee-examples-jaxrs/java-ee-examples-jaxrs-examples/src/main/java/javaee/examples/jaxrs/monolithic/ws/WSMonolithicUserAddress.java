@@ -1,15 +1,15 @@
 
 /**
- * @Class WSUser
+ * @Class WSUserAddress
  * @author Hector
- * @Created on Jun 24, 2019, 8:53:36 AM
+ * @Created on Jun 24, 2019, 8:25:32 AM
  */
 
-package javaee.examples.jaxrs.mono.ws;
+package javaee.examples.jaxrs.monolithic.ws;
 
 import java.net.URI;
-import javaee.examples.jaxrs.mono.ejbs.MonoUserEJB;
-import javaee.examples.jaxrs.mono.entities.MonoUser;
+import javaee.examples.jaxrs.monolithic.ejbs.MonoUserAddressEJB;
+import javaee.examples.jaxrs.monolithic.entities.MonoUserAddress;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -23,30 +23,30 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
-@Path("user")
-public class WSUser {
+@Path("monolitic/user-address")
+public class WSMonolithicUserAddress {
 
     @EJB
-    private MonoUserEJB userEJB;
+    private MonoUserAddressEJB userAddressEJB;
     
     @GET
     @Path("{id: \\d+}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response findById(@PathParam("id") Long id) {
-        return Response.ok(userEJB.findById(id)).build();
+        return Response.ok(userAddressEJB.findById(id)).build();
     }
     
     @GET
     @Path("all")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response getAll() {
-        return Response.ok(userEJB.get()).build();
+        return Response.ok(userAddressEJB.getAll()).build();
     }
     
     @POST
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    public Response add(@Context UriInfo uriInfo, MonoUser user) {
-        Long id = userEJB.add(user);
+    public Response add(@Context UriInfo uriInfo, MonoUserAddress userAddress) {
+        Long id = userAddressEJB.add(userAddress);
         URI uri = uriInfo.getAbsolutePathBuilder().path(String.valueOf(id)).build();
         return Response.created(uri).build();
     }
@@ -54,7 +54,7 @@ public class WSUser {
     @DELETE
     @Path("{id: \\d+}")
     public Response remove(@PathParam("id") Long id) {
-        userEJB.remove(userEJB.findById(id));
+        userAddressEJB.remove(userAddressEJB.findById(id));
         return Response.noContent().build();
     }
 }

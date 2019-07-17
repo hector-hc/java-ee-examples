@@ -5,10 +5,10 @@
  * @Created on Jun 24, 2019, 8:19:11 AM
  */
 
-package javaee.examples.jaxrs.mono.ejbs;
+package javaee.examples.jaxrs.monolithic.ejbs;
 
 import java.util.List;
-import javaee.examples.jaxrs.mono.entities.MonoUserAddress;
+import javaee.examples.jaxrs.monolithic.entities.MonoUserAddress;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

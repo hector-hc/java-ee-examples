@@ -23,7 +23,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
-@Path("userservice")
+@Path("qualifier/userservice")
 public class WSUserService {
 
     @Inject

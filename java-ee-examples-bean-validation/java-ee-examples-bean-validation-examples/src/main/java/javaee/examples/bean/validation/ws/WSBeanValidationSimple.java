@@ -15,7 +15,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("simple")
+@Path("bean-validation/simple")
 public class WSBeanValidationSimple {
     
     @POST

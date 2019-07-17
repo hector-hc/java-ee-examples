@@ -20,7 +20,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 @Stateless
-@Path("book-event-async")
+@Path("event-async/book")
 public class WSEventAsync {
 
     @Inject

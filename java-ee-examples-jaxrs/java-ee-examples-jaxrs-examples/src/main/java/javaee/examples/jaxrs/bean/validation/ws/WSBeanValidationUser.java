@@ -1,5 +1,5 @@
 /*
-* Classname:    WSUserBeanValidation.java
+* Classname:    WSBeanValidationUser.java
 * Author:       Héctor Hernández Chávez
 * Date:         16-jul-2019
 */
@@ -29,10 +29,10 @@ import javax.ws.rs.core.UriInfo;
 /**
  * @author Héctor Hernández Chávez
  */
-@Path("user/bean-validation")
+@Path("bean-validation/user")
 @Produces({MediaType.APPLICATION_JSON})
 @Consumes({MediaType.APPLICATION_JSON})
-public class WSUserBeanValidation {
+public class WSBeanValidationUser {
 
     @Inject
     UserStore userStore;
@@ -64,8 +64,8 @@ public class WSUserBeanValidation {
     @POST
     public Response createUser(@Valid @NotNull User user) {
         User userCreated = userStore.addUser(user);
-        URI userUri = uriInfo.getBaseUriBuilder().path(WSUserBeanValidation.class)
-                .path(WSUserBeanValidation.class, "getUserById").build(userCreated.getId());
+        URI userUri = uriInfo.getBaseUriBuilder().path(WSBeanValidationUser.class)
+                .path(WSBeanValidationUser.class, "getUserById").build(userCreated.getId());
         return Response.created(userUri).build();
     }
 }

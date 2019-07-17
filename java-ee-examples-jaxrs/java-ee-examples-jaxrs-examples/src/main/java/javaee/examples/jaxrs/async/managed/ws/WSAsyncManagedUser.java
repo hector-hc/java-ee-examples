@@ -18,7 +18,7 @@ import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Response;
 
 @Path("async-managed")
-public class WSAsyncManaged {
+public class WSAsyncManagedUser {
     
     @Inject
     UserAsyncManagedService asyncService;

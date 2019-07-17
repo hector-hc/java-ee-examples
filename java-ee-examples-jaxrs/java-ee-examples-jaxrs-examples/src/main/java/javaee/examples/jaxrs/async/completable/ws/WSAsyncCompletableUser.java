@@ -19,7 +19,7 @@ import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Response;
 
 @Path("async-completable")
-public class WSUserAsyncCompletable {
+public class WSAsyncCompletableUser {
 
     @Inject
     UserAsyncCompletableFutureService asyncService;

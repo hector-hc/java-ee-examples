@@ -20,7 +20,7 @@ import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Response;
 
 @Path("async-proxy")
-public class WSAsyncProxy {
+public class WSAsyncProxyUser {
 
     @Inject
     ExecutorProxy executor;
