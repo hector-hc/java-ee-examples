@@ -18,13 +18,13 @@ import javax.inject.Singleton;
 /**
  * @author Héctor Hernández Chávez
  */
-//@ApplicationScoped
+@ApplicationScoped
 //@Singleton
 public class ConfigurationExposer {
 
     private final Properties properties = new Properties();
     
-    //@PostConstruct
+    @PostConstruct
     private void initProperties() {
         try (final InputStream inputStream = ConfigurationExposer.class.getResourceAsStream("/META-INF/application.properties")) {
             properties.load(inputStream);
@@ -33,8 +33,8 @@ public class ConfigurationExposer {
         }
     }
     
-    //@Produces
-    //@Config(value = "")
+    @Produces
+    @Config(value = "")
     public String exposeConfig(InjectionPoint injectionPoint) {
         final Config config = injectionPoint.getAnnotated().getAnnotation(Config.class);
         if (config != null) {

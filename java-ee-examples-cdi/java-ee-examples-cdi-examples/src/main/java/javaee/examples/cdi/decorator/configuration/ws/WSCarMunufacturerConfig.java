@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 /**
  * @author Héctor Hernández Chávez
  */
-//@Path("config/car/manufacturer")
+@Path("config/car/manufacturer")
 public class WSCarMunufacturerConfig {
 
     @Inject

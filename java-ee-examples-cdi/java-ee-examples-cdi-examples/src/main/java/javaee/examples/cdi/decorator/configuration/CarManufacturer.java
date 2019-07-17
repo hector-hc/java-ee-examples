@@ -11,11 +11,11 @@ import javax.inject.Inject;
 /**
  * @author Héctor Hernández Chávez
  */
-//@Stateless
+@Stateless
 public class CarManufacturer {
 
-    //@Inject
-    //@Config("car.default.color")
+    @Inject
+    @Config(value = "car.default.color")
     String defaultColor;
     
     public Car manufacturer(Specification spec) {
