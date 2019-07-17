@@ -26,11 +26,11 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class UserWSTest {
+public class WSBeanValidationUserTest {
     
-    //mvn -Dtest=javaee.bean.validation.simple.ws.UserWSTest surefire:test
+    //mvn -Dtest=javaee.bean.validation.simple.ws.WSBeanValidationUserTest surefire:test
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserWSTest.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(WSBeanValidationUserTest.class);
 
     private static Client client;
     

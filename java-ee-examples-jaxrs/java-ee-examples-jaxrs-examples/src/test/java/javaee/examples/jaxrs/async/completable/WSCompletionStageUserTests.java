@@ -1,28 +1,28 @@
 /*
-* Classname:    ReportFutureBuilderTests.java
+* Classname:    WSCompletionStageUserTests.java
 * Author:       Héctor Hernández Chávez
 * Date:         17-jul-2019
 */
-package javaee.examples.ejb.async.future;
+package javaee.examples.jaxrs.async.completable;
 
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import javaee.examples.jaxrs.async.completionstage.User;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
  * @author Héctor Hernández Chávez
  */
-public class ReportFutureBuilderTests {
+public class WSCompletionStageUserTests {
 
     private static Client client;
     
@@ -30,9 +30,8 @@ public class ReportFutureBuilderTests {
     
     @BeforeClass
     public static void setUpClass() {
-        client = ClientBuilder.newBuilder().readTimeout(12, TimeUnit.SECONDS)
-                .connectTimeout(10, TimeUnit.SECONDS).build();
-        target = client.target("http://localhost:8080/java-ee-examples-ejb-examples-web/services/ejb/sync/report/future");
+        client = ClientBuilder.newBuilder().readTimeout(12, TimeUnit.SECONDS).connectTimeout(10, TimeUnit.SECONDS).build();
+        target = client.target("http://localhost:8080/java-ee-examples-jaxrs-examples-1.0/services/completion-stage/user");
     }
     
     @AfterClass
@@ -41,16 +40,16 @@ public class ReportFutureBuilderTests {
     }
     
     @Test
-    public void shouldGetResultFuture() throws InterruptedException {
+    public void shouldGetCompletionStage() throws InterruptedException {
         System.out.println("method.init");
+        User user = new User("hector", "hector.hdez@gmail.com");
         CountDownLatch waitLatch = new CountDownLatch(1);
-        CompletionStage<Response> cs = target.request(MediaType.TEXT_PLAIN).rx().get();
-        
-        cs.thenApply(this::readResponse).thenAccept(r -> {
+        CompletionStage<Response> cs = target.request(MediaType.APPLICATION_JSON).rx().post(Entity.json(user));
+        cs/*.thenApply(this::readResponse)*/.thenAccept(r -> {
             System.out.println("resultFuture: " + r);
             waitLatch.countDown();
-        }).exceptionally(e -> {
-            System.out.println("exception " + e.getMessage());
+        }).exceptionally(t -> {
+            System.out.println("exception " + t.getMessage());
             waitLatch.countDown();
             return null;
         });
@@ -58,9 +57,8 @@ public class ReportFutureBuilderTests {
         waitLatch.await();
     }
     
-    private String readResponse(Response response) {
-        System.out.println("readResponse...");
-        return response.readEntity(String.class);
+    private User readResponse(Response response) {
+        System.out.println("response: " + response);
+        return response.readEntity(User.class);
     }
-            
 }
