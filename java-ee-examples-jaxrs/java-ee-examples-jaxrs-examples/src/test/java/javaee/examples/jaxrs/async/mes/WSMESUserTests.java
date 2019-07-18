@@ -1,14 +1,13 @@
 /*
-* Classname:    WSCompletionStageUserTests.java
+* Classname:    WSMESUserTests.java
 * Author:       Héctor Hernández Chávez
-* Date:         17-jul-2019
+* Date:         18-jul-2019
 */
-package javaee.examples.jaxrs.async.completable;
+package javaee.examples.jaxrs.async.mes;
 
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
-import javaee.examples.jaxrs.async.completionstage.User;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -22,8 +21,8 @@ import org.junit.Test;
 /**
  * @author Héctor Hernández Chávez
  */
-public class WSCompletionStageUserTests {
-
+public class WSMESUserTests {
+    
     private static Client client;
     
     private static WebTarget target;
@@ -31,7 +30,7 @@ public class WSCompletionStageUserTests {
     @BeforeClass
     public static void setUpClass() {
         client = ClientBuilder.newBuilder().readTimeout(12, TimeUnit.SECONDS).connectTimeout(10, TimeUnit.SECONDS).build();
-        target = client.target("http://localhost:8080/java-ee-examples-jaxrs-examples-1.0/services/completion-stage/user");
+        target = client.target("http://localhost:8080/java-ee-examples-jaxrs-examples-1.0/services/mes/user");
     }
     
     @AfterClass
