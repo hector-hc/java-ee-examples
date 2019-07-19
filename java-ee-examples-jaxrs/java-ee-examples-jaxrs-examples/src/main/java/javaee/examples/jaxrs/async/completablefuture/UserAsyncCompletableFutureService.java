@@ -5,7 +5,7 @@
  * @Created on Jun 30, 2019, 1:31:19 PM
  */
 
-package javaee.examples.jaxrs.async.completable;
+package javaee.examples.jaxrs.async.completablefuture;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;

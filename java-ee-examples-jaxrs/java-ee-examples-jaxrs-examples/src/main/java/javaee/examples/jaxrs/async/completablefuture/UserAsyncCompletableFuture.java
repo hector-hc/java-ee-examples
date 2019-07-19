@@ -3,7 +3,7 @@
  * @author Hector
  * @Created on Jun 30, 2019, 1:30:27 PM
  */
-package javaee.examples.jaxrs.async.completable;
+package javaee.examples.jaxrs.async.completablefuture;
 
 import java.io.Serializable;
 

@@ -5,10 +5,10 @@
  * @Created on Jun 30, 2019, 1:33:20 PM
  */
 
-package javaee.examples.jaxrs.async.completable.ws;
+package javaee.examples.jaxrs.async.completablefuture.ws;
 
 import java.util.concurrent.CompletableFuture;
-import javaee.examples.jaxrs.async.completable.UserAsyncCompletableFutureService;
+import javaee.examples.jaxrs.async.completablefuture.UserAsyncCompletableFutureService;
 import javax.annotation.Resource;
 import javax.enterprise.concurrent.ManagedExecutorService;
 import javax.inject.Inject;
