@@ -10,7 +10,7 @@ package javaee.examples.bean.validation.ws.config;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("services/beanvalidation")
+@ApplicationPath("services")
 public class JAXRSConfig extends Application {
 
 }

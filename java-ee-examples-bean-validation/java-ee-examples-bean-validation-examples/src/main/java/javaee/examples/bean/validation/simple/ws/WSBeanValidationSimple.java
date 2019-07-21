@@ -5,7 +5,7 @@
  * @Created on Jun 14, 2019, 9:30:50 AM
  */
 
-package javaee.examples.bean.validation.ws;
+package javaee.examples.bean.validation.simple.ws;
 
 import javaee.examples.bean.validation.simple.User;
 import javax.validation.Valid;
