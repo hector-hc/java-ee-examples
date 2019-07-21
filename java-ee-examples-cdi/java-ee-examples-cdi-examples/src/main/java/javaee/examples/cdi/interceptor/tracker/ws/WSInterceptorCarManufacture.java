@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
  * @author Héctor Hernández Chávez
  */
 @Path("interceptor/car/manufacture")
-public class WSCarManufactureInterceptor {
+public class WSInterceptorCarManufacture {
 
     @Inject
     CarManufacturer carManuracturer;

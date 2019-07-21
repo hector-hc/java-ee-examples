@@ -23,7 +23,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("factory/car/manufacturer")
-public class WSCarManufacturer {
+public class WSFactoryCarManufacturer {
 
     @Inject
     CarManufacturer carManufacturer;

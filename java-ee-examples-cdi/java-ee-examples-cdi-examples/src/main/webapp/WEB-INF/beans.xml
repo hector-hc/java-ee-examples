@@ -12,4 +12,7 @@
         <class>javaee.examples.cdi.interceptor.tracker.TrackingInterceptor</class>
     </interceptors>
     -->
+    <alternatives>
+        <class>javaee.examples.cdi.alternatives.FancyGreetingAlternative</class>
+    </alternatives>
 </beans>

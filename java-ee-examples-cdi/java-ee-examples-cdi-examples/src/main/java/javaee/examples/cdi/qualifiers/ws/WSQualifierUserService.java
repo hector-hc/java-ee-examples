@@ -24,7 +24,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 
 @Path("qualifier/userservice")
-public class WSUserService {
+public class WSQualifierUserService {
 
     @Inject
     private User user;

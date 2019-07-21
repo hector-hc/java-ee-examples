@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
  * @author Héctor Hernández Chávez
  */
 @Path("decorator/numgen")
-public class WSNumberGeneratorDecorator {
+public class WSDecoratorNumberGenerator {
 
     @Inject
     private NumberGenerator numberGenerator;

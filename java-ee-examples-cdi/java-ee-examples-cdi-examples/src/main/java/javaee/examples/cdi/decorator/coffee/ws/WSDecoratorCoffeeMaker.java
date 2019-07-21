@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
  * @author Héctor Hernández Chávez
  */
 @Path("decorator/coffee-maker")
-public class WSCoffeeMakerDecorator {
+public class WSDecoratorCoffeeMaker {
 
     @Inject
     CoffeeMaker coffeeMaker;
