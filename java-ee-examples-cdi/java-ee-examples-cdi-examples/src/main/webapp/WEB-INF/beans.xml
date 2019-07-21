@@ -15,4 +15,13 @@
     <alternatives>
         <class>javaee.examples.cdi.alternatives.FancyGreetingAlternative</class>
     </alternatives>
+    <scan>
+        <exclude name="javaee.examples.cdi.exclude.filter.bean.*">
+            <if-class-available name="javaee.examples.cdi.exclude.filter.bean.SimpleGreetingFilter">
+            </if-class-available>
+        </exclude>
+        <exclude name="javaee.examples.cdi.exclude.filter.bean.*">
+            <if-system-property name="verbosity" value="low" />
+        </exclude>
+    </scan>
 </beans>
