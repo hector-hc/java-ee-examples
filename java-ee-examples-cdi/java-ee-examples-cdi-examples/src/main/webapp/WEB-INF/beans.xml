@@ -12,6 +12,9 @@
         <class>javaee.examples.cdi.interceptor.tracker.TrackingInterceptor</class>
     </interceptors>
     -->
+    <interceptors>
+        <class>javaee.examples.cdi.interceptor.jaxrs.TimeZoneScheduledSendInterceptor</class>
+    </interceptors>
     <alternatives>
         <class>javaee.examples.cdi.alternatives.FancyGreetingAlternative</class>
     </alternatives>
