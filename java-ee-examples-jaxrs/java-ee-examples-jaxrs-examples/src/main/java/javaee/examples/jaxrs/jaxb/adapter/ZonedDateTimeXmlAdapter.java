@@ -5,7 +5,7 @@
  * @Created on Jul 21, 2019, 8:36:03 PM
  */
 
-package javaee.examples.jaxrs.xml.adapter;
+package javaee.examples.jaxrs.jaxb.adapter;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -20,8 +20,8 @@ public class ZonedDateTimeXmlAdapter extends XmlAdapter<String, ZonedDateTime> {
     }
 
     @Override
-    public String marshal(ZonedDateTime v) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String marshal(ZonedDateTime dateTime) throws Exception {
+        return Optional.ofNullable(dateTime).map(dt -> dateTime.withFixedOffsetZone().format(DateTimeFormatter.ISO_DATE_TIME)).orElse(null);
     }
-
+    
 }
