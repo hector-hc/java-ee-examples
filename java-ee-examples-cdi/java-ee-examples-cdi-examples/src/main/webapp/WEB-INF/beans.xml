@@ -14,6 +14,7 @@
     -->
     <interceptors>
         <class>javaee.examples.cdi.interceptor.jaxrs.TimeZoneScheduledSendInterceptor</class>
+        <class>javaee.examples.cdi.interceptor.logger.LoggingInterceptor</class>
     </interceptors>
     <alternatives>
         <class>javaee.examples.cdi.alternatives.FancyGreetingAlternative</class>

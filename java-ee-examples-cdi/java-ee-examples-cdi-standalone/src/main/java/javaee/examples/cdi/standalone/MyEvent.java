@@ -5,7 +5,7 @@
  * @Created on Jun 14, 2019, 1:30:43 PM
  */
 
-package javaee.cdi.standalone;
+package javaee.examples.cdi.standalone;
 
 public class MyEvent {
     private final String value;

@@ -5,7 +5,7 @@
  * @Created on Jun 14, 2019, 1:31:52 PM
  */
 
-package javaee.cdi.standalone;
+package javaee.examples.cdi.standalone;
 
 import javax.annotation.Priority;
 import javax.enterprise.event.Observes;
