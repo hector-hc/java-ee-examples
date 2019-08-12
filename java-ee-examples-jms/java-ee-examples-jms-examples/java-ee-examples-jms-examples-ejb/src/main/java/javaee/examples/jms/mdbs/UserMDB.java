@@ -10,6 +10,7 @@ package javaee.examples.jms.mdbs;
 import javaee.examples.jms.model.User;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
+import javax.ejb.MessageDrivenContext;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
@@ -20,6 +21,8 @@ import javax.jms.MessageListener;
 })
 public class UserMDB implements MessageListener {
 
+    MessageDrivenContext mdc;
+    
     @Override
     public void onMessage(Message message) {
         System.out.println("message received..... ");
@@ -29,6 +32,7 @@ public class UserMDB implements MessageListener {
                 System.out.println("User: " + user);
             //}
         } catch (JMSException jmse) {
+            mdc.setRollbackOnly();
             System.out.println("" + jmse.getMessage());
         }
     }

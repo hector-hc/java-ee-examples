@@ -8,6 +8,7 @@
 package javaee.examples.cdi.events.async.simple.ws;
 
 import java.util.Date;
+import java.util.concurrent.CompletionStage;
 import javaee.examples.cdi.events.async.simple.User;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
@@ -31,7 +32,7 @@ public class WSEventAsync {
     public void asyncService(@Suspended AsyncResponse response) {
         long id = new Date().getTime();
         this.reponse = response;
-        event.fireAsync(new User(id, "User_" + id));
+        CompletionStage<User> r = event.fireAsync(new User(id, "User_" + id));
     }
     
     public void onFireEvent(@ObservesAsync User user) {
